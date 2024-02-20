@@ -1,26 +1,100 @@
 <!DOCTYPE html>
 <HTML>
     <head>
-        <title>WatchaTrivia</title>
+        <title>WatchTrivia</title>
         <meta charset="UTF-8" lang="eng">
         <meta name="viewport" content="width=device-width, initial-scale+1.0">
+
+        <style>
+          div .questioncontainer {
+                                  padding: 20px;
+                                  
+         }
+
+         .marks{text-align: right;
+                background-color: darkgray;
+                padding: 5px;
+         }
+
+         body{background-color: rgb(104, 152, 241);}
+
+         h1{text-align: center; 
+            color: antiquewhite;
+            background-color: black;
+            padding: 40px;
+            border-top: 5px solid black;
+            position: top;
+         }
+
+         .question{text-align: center;
+                  padding: 30px;
+                  background-color: dimgray;
+         }
+
+         .options{background-color: antiquewhite;
+               text-align: center;
+               padding: 24px;
+         }
+          
+         #indieoptions{
+            border: 2px solid black;
+            padding: 12px;
+            }
+
+         p{text-align: center;}
+      
+        </style>
     </head>
 
 <body>
-    <h1>WatchaTrivia</h1>
+    <h1>WatchTrivia</h1>
     <p>This is a game meant to test how much you know about different luxury watch brands. Let's dive in!</p>
     
   <div>
      <div class="questioncontainer"> 
         <div class="question">Which of the Brands Listed Below is the Most Famous?</div>
      <div class="options">
-        <input type="radio">Rolex</input>
-        <input type="radio">Omega</input>
-        <input type="radio">TAGHeuer</input>
-        <input type="radio">Cartier</input>
+        <input id="indieoptions" type="radio" class>Rolex</input>
+        <input id="indieoptions" type="radio">Omega</input>
+        <input id="indieoptions" type="radio">TAGHeuer</input>
+        <input id="indieoptions" type="radio">Cartier</input>
      </div>
+     <div class="marks">1 point</div>
   </div>
 
+
+
+  <div class="questioncontainer"> 
+     <div class="question">Who is the Fouder of the Rolex?</div>
+  <div class="options">
+     <input type="radio">Louis Cartier</input>
+     <input type="radio">Hans Wilsdorf</input>
+     <input type="radio">Davis Rolex</input>
+     <input type="radio">Santos Dumont</input>
+  </div>
+  <div class="marks">2 points</div>
+</div>
+
+<div class="questioncontainer"> 
+   <div class="question">Why Did the Founder of Rolex Name the Brand Rolex?</div>
+<div class="options">
+   <input type="radio">He named it after himself.</input>
+   <input type="radio">He named it after a firend.</input>
+   <input type="radio">He wanted a name that sounded classy and was easy to pronounce.</input>
+   <input type="radio">It was a random choice.</input>
+</div>
+<div class="marks">2 points</div>
+</div>
+
+<div class="questioncontainer"> 
+   <div class="question">Which Brand was the First to Create and Commercially Distribute the Dive Watch</div>
+<div class="options">
+   <input type="radio">Patek Phillipe</input>
+   <input type="radio">Vecheron Constantin</input>
+   <input type="radio">TAGHeuer</input>
+   <input type="radio">Omega</input>
+</div>
+<div class="marks">1 points</div>
 
 
   </div>
