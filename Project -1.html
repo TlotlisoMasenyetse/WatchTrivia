@@ -6,47 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale+1.0">
 
         <style>
-          div .questioncontainer {
-                                  padding: 20px;
-                                  
-         }
-
-         .marks{text-align: right;
-                background-color: darkgray;
-                padding: 5px;
-         }
-
-         body{background-color: rgb(104, 152, 241);}
-
-         h1{
-            margin:0;
-            text-align: center;
-            font-size: 50px;
-            color: antiquewhite;
-            background-color: black;
-            padding: 40px;
-            border-top: 5px solid black;
-            position: top;
-            width: 100%;
-         }
-
-         .question{text-align: center;
-                  padding: 30px;
-                  background-color: dimgray;
-         }
-
-         .options{background-color: antiquewhite;
-               text-align: center;
-               padding: 24px;
-         }
           
-         #indieoptions{
-            border: 2px solid black;
-            padding: 12px;
-            }
+           h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        
+        }
 
-         p{text-align: center;}
-      
         </style>
     </head>
 
@@ -54,76 +21,115 @@
     <h1>WatchTrivia</h1>
     <p>This is a game meant to test how much you know about different luxury watch brands. Let's dive in!</p>
     
-  <div>
-     <div class="questioncontainer"> 
-        <div class="question">Which of the Brands Listed Below is the Most Famous?</div>
-     <div class="options">
-        <input id="indieoptions" type="radio" class>Rolex</input>
-        <input id="indieoptions" type="radio">Omega</input>
-        <input id="indieoptions" type="radio">TAGHeuer</input>
-        <input id="indieoptions" type="radio">Cartier</input>
-     </div>
-     <div class="marks">1 point</div>
-  </div>
+  
+    <h2>Which of the brands listed below is the most famous?</h2>
+    <form>
+        <input type="radio" id="option">
+        <label for="paris">Rolex</label><br>
+        
+        <input type="radio" id="option">
+        <label for="berlin">Omega</label><br>
+        
+        <input type="radio" id="option">
+        <label for="london">TAGHeuer</label><br>
+        
+        <input type="radio" id="option">
+        <label for="rome">Patek Phillipe</label><br>
+        
+        <input type="submit" value="Submit">
+   </form>
 
+   <h2>Who is the founder of Rolex?</h2>
+    <form>
+        <input type="radio" id="option">
+        <label for="paris">Loius Cartier</label><br>
+        
+        <input type="radio" id="option">
+        <label for="berlin">David Rolex</label><br>
+        
+        <input type="radio" id="option">
+        <label for="london">Hans Wilsdorf</label><br>
+        
+        <input type="radio" id="option">
+        <label for="rome">Francois Constantin</label><br>
+        
+        <input type="submit" value="Submit">
+   </form>
+  
+   <h2>Why did the founder of Rolex name the brand Rolex?</h2>
+   <form>
+       <input type="radio" id="option">
+       <label for="paris">He named it after himself</label><br>
+       
+       <input type="radio" id="option">
+       <label for="berlin">He named it after a friend</label><br>
+       
+       <input type="radio" id="option">
+       <label for="london">He wanted a name that sounded classy and was easy to pronounce</label><br>
+       
+       <input type="radio" id="option">
+       <label for="rome">It was a random choice</label><br>
+       
+       <input type="submit" value="Submit">
+  </form>
 
+  <h2>Which brand was the first to produce and commercialy distribute the dive watch?</h2>
+   <form>
+       <input type="radio" id="option">
+       <label for="paris">Rolex</label><br>
+       
+       <input type="radio" id="option">
+       <label for="berlin">Seiko</label><br>
+       
+       <input type="radio" id="option">
+       <label for="london">TAGHeuer</label><br>
+       
+       <input type="radio" id="option">
+       <label for="rome">Omega</label><br>
+       
+       <input type="submit" value="Submit">
+  </form>
 
-  <div class="questioncontainer"> 
-     <div class="question">Who is the Fouder of the Rolex?</div>
-  <div class="options">
-     <input type="radio">Louis Cartier</input>
-     <input type="radio">Hans Wilsdorf</input>
-     <input type="radio">Davis Rolex</input>
-     <input type="radio">Santos Dumont</input>
-  </div>
-  <div class="marks">2 points</div>
-</div>
+  <h2>Why of the brands below produced the most expensive watch ever sold?</h2>
+   <form>
+       <input type="radio" id="option">
+       <label for="paris">Audemars Piguet</label><br>
+       
+       <input type="radio" id="option">
+       <label for="berlin">Richer Millie</label><br>
+       
+       <input type="radio" id="option">
+       <label for="london">Patek Phillipe</label><br>
+       
+       <input type="radio" id="option">
+       <label for="rome">Frank Muller</label><br>
+       
+       <input type="submit" value="Submit">
+  </form>
 
-<div class="questioncontainer"> 
-   <div class="question">Why Did the Founder of Rolex Name the Brand Rolex:</div>
-<div class="options">
-   <input type="radio">He named it after himself.</input>
-   <input type="radio">He named it after a firend.</input>
-   <input type="radio">He wanted a name that sounded classy and was easy to pronounce.</input>
-   <input type="radio">It was a random choice.</input>
-</div>
-<div class="marks">2 points</div>
-</div>
+  <h2>What was the price of this watch?</h2>
+  <form>
+      <input type="radio" id="option">
+      <label for="paris">$21 Million</label><br>
+      
+      <input type="radio" id="option">
+      <label for="berlin">$32 Million</label><br>
+      
+      <input type="radio" id="option">
+      <label for="london">$31 Million</label><br>
+      
+      <input type="radio" id="option">
+      <label for="rome">$54 Million</label><br>
+      
+      <input type="submit" value="Submit">
+ </form>
 
-<div class="questioncontainer"> 
-   <div class="question">Which Brand was the First to Create and Commercially Distribute the Dive Watch?</div>
-<div class="options">
-   <input type="radio">Patek Phillipe</input>
-   <input type="radio">Vecheron Constantin</input>
-   <input type="radio">TAGHeuer</input>
-   <input type="radio">Omega</input>
-</div>
-<div class="marks">1 points</div>
-
-<div class="questioncontainer"> 
-   <div class="question">Which Brand Produced the Most Expensive Luxury Watch Ever Sold?</div>
-<div class="options">
-   <input type="radio">Audemars Piguet</input>
-   <input type="radio">Patek Phillipe</input>
-   <input type="radio">Cartier</input>
-   <input type="radio">Rolex</input>
-</div>
-<div class="marks">2 points</div>
-
-<div class="questioncontainer"> 
-   <div class="question">What Was the Price of this Watch?</div>
-<div class="options">
-   <input type="radio">$21 Million</input>
-   <input type="radio">$34 Million</input>
-   <input type="radio">$31 Million</input>
-   <input type="radio">$50 Million</input>
-</div>
-<div class="marks">2 points</div>
-
-
-
-
-  </div>
+ <h2>There's a 57 year old Japanese watchmaker renowned for making watches after being dissatistfied with the current state of watches</h2>
+    <form>
+        <label for="answer">What's his name?</label><br>
+        <input type="text" id="question" name="answer"><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 
