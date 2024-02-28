@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<HTML>
+<html>
     <head>
-        <title>WatchTrivia</title>
-        <meta charset="UTF-8" lang="eng">
-        <meta name="viewport" content="width=device-width, initial-scale+1.0">
+      <title>WatchTrivia</title>
+      <style>
 
-        <style>
-
-            body{
-                background-color: rgb(93, 202, 238);
-            }
-          
-           h1{
+        h1{
             text-align: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-color: black;
@@ -25,268 +18,358 @@
             z-index: 1000;
          }
 
-         form{
-            background-color: white;
-         }
-
-         h2{
-            border: 2px solid black;
-            background-color: darkgray;
-         }
-
-         form {
-            border: 2px solid black;
-            padding: 5px;
-          }
-        
-        label{
-            margin:10px;
-            padding: 5px;
-        }
-
          #questionone {
-            margin-top: 50px;
+            margin-top: 100px;
         
         }
 
-        .option{
-            padding: 8px;
-            margin: 8px;
-        }
-
-        .container {
-            margin: 0 auto;
-            text-align: center; 
-        }
-
-        h2, form {
-            margin: 0;
-            padding:20px;
-        }
+       
+       .quiz-container {
+         max-width: 600px;
+         margin: 0 auto;
+         padding: 20px;
+         border: 2px solid #ccc;
+         border-radius: 8px;
+       }
 
 
-        #question{
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
+      .question-area {
+        margin-bottom: 20px;
+}
 
-        input[type="submit"]{
-            margin: 10px;
-            padding: 10px;
-            border: 2px solid black;
-            background-color: darkgray;
-            width: 98%;
-            box-sizing: border-box;
-        }
-        
+/* Styles for the options area */
+.options-area label {
+    display: block;
+    margin-bottom: 10px;
+}
 
-        </style>
+/* Styles for the feedback area */
+.feedback-area {
+    margin-bottom: 20px;
+}
+
+/* Styles for the scoreboard */
+.scoreboard {
+    text-align: right;
+}
+
+
+      </style>
     </head>
+    <body>
+        <h1>WatchTrivia</h1>
 
-<body>
-    <h1>WatchTrivia</h1>
-    <p>This is a game meant to test how much you know about different luxury watch brands. Let's dive in!</p>
-    
-    <div class="container" id="questionone">
-    <h2>Which of the brands listed below is the most famous?</h2>
-    <form>
-        <input type="radio" class="option">
-        <label for="rolex">Rolex</label><br>
-        
-        <input type="radio" class="option">
-        <label for="omega">Omega</label><br>
-        
-        <input type="radio" class="option">
-        <label for="tagheuer">TAGHeuer</label><br>
-        
-        <input type="radio" class="option">
-        <label for="patek">Patek Phillipe</label><br>
-
-        <input type="submit" value="Submit">
-   </form>
-    </div>
-
-   <div class="container" id="question">
-   <h2>Who is the founder of Rolex?</h2>
-    <form>
-        <input type="radio" class="option">
-        <label for="louiscartier">Loius Cartier</label><br>
-        
-        <input type="radio" class="option">
-        <label for="davidrolex">David Rolex</label><br>
-        
-        <input type="radio" class="option">
-        <label for="hanswilsdorf">Hans Wilsdorf</label><br>
-        
-        <input type="radio" class="option">
-        <label for="francoisconstantin">Francois Constantin</label><br>
-        
-        <input type="submit" value="Submit">
-   </form>
-   </div>
-
-   <div class="container" id="question">
-   <h2>Why did the founder of Rolex name the brand Rolex?</h2>
-   <form>
-       <input type="radio" class="option">
-       <label for="henameditafterhimself">He named it after himself</label><br>
-       
-       <input type="radio" class="option">
-       <label for="henameditafterafriend">He named it after a friend</label><br>
-       
-       <input type="radio" class="option">
-       <label for="hewantedanamethatsoundedclassyandwaseasytopronounce">He wanted a name that sounded classy and was easy to pronounce</label><br>
-       
-       <input type="radio" class="option">
-       <label for="itwasarandomchoice">It was a random choice</label><br>
-       
-       <input type="submit" value="Submit">
-  </form>
-  </div>
-
-  <div class="container" id="question">
-  <h2>Which brand was the first to produce and commercialy distribute the dive watch?</h2>
-   <form>
-       <input type="radio" class="option">
-       <label for="rolex">Rolex</label><br>
-       
-       <input type="radio" class="option">
-       <label for="seiko">Seiko</label><br>
-       
-       <input type="radio" class="option">
-       <label for="tagheuer">TAGHeuer</label><br>
-       
-       <input type="radio" class="option">
-       <label for="omega">Omega</label><br>
-       
-       <input type="submit" value="Submit">
-  </form>
-  </div>
-
-  <div class="container" id="question">
-  <h2>Which of the brands below produced the most expensive watch ever sold?</h2>
-   <form>
-       <input type="radio" class="option">
-       <label for="AP">Audemars Piguet</label><br>
-       
-       <input type="radio" class="option">
-       <label for="richardmille">Richard Mille</label><br>
-       
-       <input type="radio" class="option">
-       <label for="patek">Patek Phillipe</label><br>
-       
-       <input type="radio" class="option">
-       <label for="muller">Frank Muller</label><br>
-       
-       <input type="submit" value="Submit">
-  </form>
-  </div>
-
-  <div class="container" id="question">
-  <h2>What was the price of this watch?</h2>
-  <form>
-      <input type="radio" class="option">
-      <label for="21million">$21 Million</label><br>
-      
-      <input type="radio" class="option">
-      <label for="32million">$32 Million</label><br>
-      
-      <input type="radio" class="option">
-      <label for="31million">$31 Million</label><br>
-      
-      <input type="radio" class="option">
-      <label for="54million">$54 Million</label><br>
-      
-      <input type="submit" value="Submit">
-  </form>
-  </div>
-
-  <div class="container" id="question">
-  <h2>There's a 57 year old Japanese watchmaker renowned for making watches after being dissatistfied with the current state of watches</h2>
-    <form>
-        <label for="answer"><b>What's his name?</b></label><br>
-        <input type="text" id="question" name="answer" autocomplete="off"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-  </div>
-
-  <div class="container" id="question">
-    <h2>Which model of the Rolex is the most famous?</h2>
-    <form>
-        <input type="radio" class="option">
-        <label for="21million">Datejust</label><br>
-        
-        <input type="radio" class="option">
-        <label for="32million">Explorer</label><br>
-        
-        <input type="radio" class="option">
-        <label for="31million">Daytona</label><br>
-        
-        <input type="radio" class="option">
-        <label for="54million">Submariner</label><br>
-        
-        <input type="submit" value="Submit">
-    </form>
-    </div>
-
-    <div class="container" id="question">
-        <h2>Which brand is home to the most luxury watch brands?</h2>
-        <form>
-            <input type="radio" class="option">
-            <label for="china">China</label><br>
-            
-            <input type="radio" class="option">
-            <label for="usa">USA</label><br>
-            
-            <input type="radio" class="option">
-            <label for="england">England</label><br>
-            
-            <input type="radio" class="option">
-            <label for="switzerland">Switzerland</label><br>
-            
-            <input type="submit" value="Submit">
-        </form>
+        <div class="quiz-container" id="questionone">
+            <div class="question-area">
+                <h2>Question 1</h2>
+                <p>Which of the brands listed below is the most famous?</p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Rolex</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B. Patek Philippe</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. Cartier</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Omega</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
         </div>
 
-        <div class="container" id="question">
-            <h2>How much does the watch industry contribute to Switzerland's GDP?</h2>
-            <form>
-                <input type="radio" class="option">
-                <label for="5">5%</label><br>
-                
-                <input type="radio" class="option">
-                <label for="1">1%</label><br>
-                
-                <input type="radio" class="option">
-                <label for="2">2%</label><br>
-                
-                <input type="radio" class="option">
-                <label for="4">4%</label><br>
-                
-                <input type="submit" value="Submit">
-            </form>
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 2</h2>
+                <p>Who is the founder of Rolex?</p>
             </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Davis Rolex</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B. Hans Wilsdorf</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. Loius Cartier</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Francois Constantin</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
 
-            <div class="container" id="question">
-                <h2>How much money does Rolex make in a year?</h2>
-                <form>
-                    <input type="radio" class="option">
-                    <label for="9.1mil">$9.1 Million</label><br>
-                    
-                    <input type="radio" class="option">
-                    <label for="9.7mil">$9.7 Million</label><br>
-                    
-                    <input type="radio" class="option">
-                    <label for="10mil">$10 Million</label><br>
-                    
-                    <input type="radio" class="option">
-                    <label for="8.5mil">$8.5 Million</label><br>
-                    
-                    <input type="submit" value="Submit">
-                </form>
-                </div>
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 3</h2>
+                <p>Why did the founder of Rolex name the brand Rolex?</p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. He named it after himself</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.He named it after a friend</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. He wanted a name that sounded classy and was easy to pronounce</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. It was a random choice</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 4</h2>
+                <p>Which brand was the first to produce and commercialy distribute the dive watch?</p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Rolex</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.Seiko</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. TAGHeuer</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Omega</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 5</h2>
+                <p>Which of the brands below produced the most expensive watch ever sold? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Audemars Piguet</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.Richard Mille</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. Patek Phillipe</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Frank Muller</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
 
 
-</body>
 
-</HTML>
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 6</h2>
+                <p>What was the price of this watch? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. 21 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.32 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. 31 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. 54 Million</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 7</h2>
+                <p>Which country is home to the most luxury watch brands? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. China</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.USA</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. England</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Switzerland</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+        
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 8</h2>
+                <p>How much does the watch industry contribute to Switzerland's GDP? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. 5%</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.1%</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. 2%</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. 4%</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 9</h2>
+                <p>How much money does Rolex make in a year? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. $9.1 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B.$9.7 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. $10 Million</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. $8.5 Million</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 10</h2>
+                <p>Which watch brand is the most expensive? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Patek Phillipe</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B. Lange & Sonhe</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. Vacheron Constantin</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Roger Dubuis</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
+    </body>
+</html>
