@@ -94,6 +94,141 @@
     text-align: right;
 }
 
+.........
+
+  
+.options-area label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.options-area input[type="radio"] {
+    margin-right: 5px;
+    
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+}
+
+.options-area input[type="radio"]:checked + span {
+    font-weight: bold;
+}
+
+.options-area span {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.options-area input[type="radio"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.options-area input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 4px;
+}
+
+.........
+
+
+.feedback-area.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.feedback-area.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+.feedback-area {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #c8e5bc;
+    border-radius: 4px;
+    color: #3c763d;
+    opacity: 0; 
+    animation: fadeIn 0.3s ease forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.........
+
+
+ .scoreboard {
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.scoreboard #score {
+    font-weight: bold;
+}
+
+
+.game-over {
+    display: none; 
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-over h2 {
+    color: #333;
+}
+
+.game-over p {
+    margin-bottom: 10px;
+}
+
+.game-over .restart-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-over .restart-button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .quiz-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+
 
       </style>
     </head>
@@ -131,6 +266,24 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+        
+
         <div class="quiz-container" >
             <div class="question-area">
                 <h2>Question 2</h2>
@@ -161,6 +314,23 @@
                 <p>Score: 0</p>
             </div>
         </div>
+        
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
 
         <div class="quiz-container" >
             <div class="question-area">
@@ -193,6 +363,23 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+
         <div class="quiz-container" >
             <div class="question-area">
                 <h2>Question 4</h2>
@@ -223,6 +410,23 @@
                 <p>Score: 0</p>
             </div>
         </div>
+
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
 
         <div class="quiz-container" >
             <div class="question-area">
@@ -255,6 +459,22 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
 
 
         <div class="quiz-container" >
@@ -288,6 +508,23 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+
         <div class="quiz-container" >
             <div class="question-area">
                 <h2>Question 7</h2>
@@ -318,6 +555,23 @@
                 <p>Score: 0</p>
             </div>
         </div>
+
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
         
         <div class="quiz-container" >
             <div class="question-area">
@@ -350,6 +604,23 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+
         <div class="quiz-container" >
             <div class="question-area">
                 <h2>Question 9</h2>
@@ -381,6 +652,23 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+
         <div class="quiz-container" >
             <div class="question-area">
                 <h2>Question 10</h2>
@@ -393,7 +681,7 @@
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
-                    <span>B. Lange & Sonhe</span>
+                    <span>B. Lange & Söhne</span>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
@@ -412,9 +700,26 @@
             </div>
         </div>
 
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>Your final score is <span id="final-score">0</span>.</p>
+            <button class="restart-button">Restart</button>
+        </div>
+        
+
         <div class="quiz-container" >
             <div class="question-area">
-                <h2>Question 10</h2>
+                <h2>Question 11</h2>
                 <p>What movement is the most used? </p>
             </div>
             <div class="options-area">
@@ -441,6 +746,16 @@
             <div class="scoreboard">
                 <p>Score: 0</p>
             </div>
+        </div>
+
+        <div class="feedback-area correct">
+            <p>Your answer is correct!</p>
+        </div>
+        <div class="feedback-area incorrect">
+            <p>Your answer is incorrect!</p>
+        </div>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
         </div>
 
 
