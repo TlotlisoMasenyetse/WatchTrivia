@@ -37,18 +37,59 @@
         margin-bottom: 20px;
 }
 
-/* Styles for the options area */
-.options-area label {
-    display: block;
-    margin-bottom: 10px;
-}
 
-/* Styles for the feedback area */
-.feedback-area {
-    margin-bottom: 20px;
-}
+    .options-area label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      cursor: pointer;
+   }
 
-/* Styles for the scoreboard */
+    .options-area input[type="radio"] {
+      margin-right: 5px;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      outline: none;
+   }
+
+    .options-area input[type="radio"]:checked + span {
+      font-weight: bold;
+   }
+
+    .options-area span {
+      vertical-align: middle;
+      cursor: pointer;
+   }
+
+    .options-area input[type="radio"]:checked {
+      background-color: #007bff;
+      border-color: #007bff;
+   }
+
+    .options-area input[type="radio"]:checked::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 4px;
+   }
+
+
+    .options-area label {
+      display: block;
+      margin-bottom: 10px;
+   }
+
+
+    .feedback-area {
+      margin-bottom: 20px;
+   }
+
 .scoreboard {
     text-align: right;
 }
@@ -370,6 +411,38 @@
                 <p>Score: 0</p>
             </div>
         </div>
+
+        <div class="quiz-container" >
+            <div class="question-area">
+                <h2>Question 10</h2>
+                <p>What movement is the most used? </p>
+            </div>
+            <div class="options-area">
+                <label>
+                    <input type="radio" name="answer" value="a"> 
+                    <span>A. Mechanical</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="b"> 
+                    <span>B. Automatic</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="c"> 
+                    <span>C. Quartz</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="d"> 
+                    <span>D. Eco-Drive</span>
+                </label>
+            </div>
+            <div class="feedback-area">
+                <p>Your answer is correct!</p>
+            </div>
+            <div class="scoreboard">
+                <p>Score: 0</p>
+            </div>
+        </div>
+
 
     </body>
 </html>
