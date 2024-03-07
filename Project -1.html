@@ -263,6 +263,21 @@ button[type=submit]{
       transform: translateY(4px);
      }
 
+     .feedback {
+    display: none;
+    margin-top: 10px;
+  }
+ 
+  input[type="radio"] + label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="radio"]:checked + label + .feedback {
+    display: block;
+  }
+     
+
       </style>
     </head>
 
@@ -281,10 +296,12 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. Rolex</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B. Patek Philippe</span>
+                    <div class="feedback">Incorrect. The correct answer is Rolex.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
@@ -1357,19 +1374,27 @@ button[type=submit]{
 </div>
 
 <script>
-    var button = document.getElementById('submitBtn');
+   let submitBtnClicks = 0;
 
-    var clickCountSpan = document.getElementById('clickCount');
-
-    var clickCount = 0;
-
-    button.addEventListener('click', function() {
-
-        clickCount++;
-
-        clickCountSpan.textContent = clickCount;
-    });
+document.querySelectorAll("button[type='submit']").forEach(button => {
+  button.addEventListener("click", function() {
+    submitBtnClicks++;
+    document.querySelector("#clickCount").textContent = submitBtnClicks;
+  });
+});
 </script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  var submitButtons = document.querySelectorAll('button[type="submit"]');
+  for (var i = 0; i < submitButtons.length; i++) {
+    submitButtons[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      // your code here
+    });
+  }
+});
+  </script>
       
     </body>
 </html>
