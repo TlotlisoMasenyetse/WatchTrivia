@@ -103,12 +103,6 @@
       margin-bottom: 10px;
    }
 
-
-    .feedback-area {
-        display:none;
-      margin-bottom: 20px;
-   }
-
 .scoreboard {
     text-align: right;
 }
@@ -158,29 +152,6 @@
     margin: 4px;
 }
 
-.feedback-area.correct {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-}
-
-.feedback-area.incorrect {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-}
-
-
-.feedback-area {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #dff0d8;
-    border: 1px solid #c8e5bc;
-    border-radius: 4px;
-    color: #3c763d;
-    opacity: 0; 
-    animation: fadeIn 0.3s ease forwards; 
-}
 
 @keyframes fadeIn {
     from {
@@ -257,26 +228,13 @@ button[type=submit]{
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
 
-    .button:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-     }
+    .feedback {
+        display: none;
+    }
 
-     .feedback {
-    display: none;
-    margin-top: 10px;
-  }
- 
-  input[type="radio"] + label {
-    cursor: pointer;
-    display: block;
-    margin-bottom: 5px;
-  }
-  input[type="radio"]:checked + label + .feedback {
-    display: block;
-  }
-     
+    input[type="radio"]:checked + span + .feedback {
+        display: block;
+    }
 
       </style>
     </head>
@@ -306,10 +264,12 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. Cartier</span>
+                    <div class="feedback">Incorrect. The correct answer is Rolex.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Omega</span>
+                    <div class="feedback">Incorrect. The correct answer is Rolex.</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -319,12 +279,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
+        
         
         
         <div class="game-over">
@@ -344,18 +299,23 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. Davis Rolex</span>
+                    <div class="feedback">Incorrect. The correct answer is Hans Wilsdorf.</div>
+
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B. Hans Wilsdorf</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. Loius Cartier</span>
+                    <div class="feedback">Incorrect. The correct answer is Hans Wilsdorf.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Francois Constantin</span>
+                    <div class="feedback">Incorrect. The correct answer is Hans Wilsdorf.</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -364,19 +324,7 @@ button[type=submit]{
 
         </div>
         
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
         <div class="quiz-container" >
@@ -388,18 +336,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. He named it after himself</span>
+                    <div class="feedback">Incorrect. The correct answer is C.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.He named it after a friend</span>
+                    <div class="feedback">Incorrect. The correct answer is C.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. He wanted a name that sounded classy and was easy to pronounce</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. It was a random choice</span>
+                    <div class="feedback">Incorrect. The correct answer is C.</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -408,20 +360,6 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
-        
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
-        
 
         <div class="quiz-container" >
             <div class="question-area">
@@ -432,18 +370,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. Rolex</span>
+                    <div class="feedback">Incorrect. The correct answer is Omega.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.Seiko</span>
+                    <div class="feedback">Incorrect. The correct answer is Omega.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. TAGHeuer</span>
+                    <div class="feedback">Incorrect. The correct answer is Omega.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Omega</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -452,19 +394,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
         <div class="quiz-container" >
@@ -476,18 +406,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. Audemars Piguet</span>
+                    <div class="feedback">Incorrect. The correct answer is Patek Phillipe.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.Richard Mille</span>
+                    <div class="feedback">Incorrect. The correct answer is Patek Phillipe.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. Patek Phillipe</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Frank Muller</span>
+                    <div class="feedback">Incorrect. The correct answer is Patek Phillipe.</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -496,19 +430,7 @@ button[type=submit]{
            
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
 
@@ -521,18 +443,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. 21 Million</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.32 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is 21 Million.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. 31 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is 21 Million.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. 54 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is 21 Million.</div>
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
@@ -543,19 +469,7 @@ button[type=submit]{
            
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
         <div class="quiz-container" >
@@ -567,18 +481,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. China</span>
+                    <div class="feedback">Incorrect. The correct answer is Switzeralnd.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.USA</span>
+                    <div class="feedback">Incorrect. The correct answer is Switzeralnd.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. England</span>
+                    <div class="feedback">Incorrect. The correct answer is Switzeralnd.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Switzerland</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <form>
                     <button id="submitBtn" type="submit">Submit</button>
@@ -587,19 +505,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
         
         <div class="quiz-container" >
@@ -611,18 +517,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. 5%</span>
+                    <div class="feedback">Incorrect. The correct answer is 4%.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.1%</span>
+                    <div class="feedback">Incorrect. The correct answer is 4%.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. 2%</span>
+                    <div class="feedback">Incorrect. The correct answer is 4%.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. 4%</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <form>
                     <button id="submitBtn" type="submit">Submit</button>
@@ -630,20 +540,6 @@ button[type=submit]{
             </div>
            
         </div>
-
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
-        
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
-        
 
         <div class="quiz-container" >
             <div class="question-area">
@@ -654,18 +550,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. $9.1 Million</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
                     <span>B.$9.7 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is $9.1 Million.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. $10 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is $9.1 Million.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. $8.5 Million</span>
+                    <div class="feedback">Incorrect. The correct answer is $9.1 Million.</div>
                 </label>
                 <form>
                     <button id="submitBtn" type="submit">Submit</button>
@@ -674,19 +574,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
         <div class="quiz-container" >
@@ -698,18 +586,22 @@ button[type=submit]{
                 <label>
                     <input type="radio" name="answer" value="a"> 
                     <span>A. Patek Phillipe</span>
+                    <div class="feedback">Incorrect. The correct answer is A.Lange & Söhne.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="b"> 
-                    <span>B. Lange & Söhne</span>
+                    <span>B. A.Lange & Söhne</span>
+                    <div class="feedback">Correct!</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="c"> 
                     <span>C. Vacheron Constantin</span>
+                    <div class="feedback">Incorrect. The correct answer is A.Lange & Söhne.</div>
                 </label>
                 <label>
                     <input type="radio" name="answer" value="d"> 
                     <span>D. Roger Dubuis</span>
+                    <div class="feedback">Incorrect. The correct answer is A.Lange & Söhne.</div>
                 </label>
                 <form>
                     <button id="submitBtn" type="submit">Submit</button>
@@ -718,19 +610,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
         
-
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
         
 
         <div class="quiz-container" >
@@ -762,12 +642,7 @@ button[type=submit]{
             
         </div>
 
-        <div class="feedback-area correct">
-            <p>Your answer is correct!</p>
-        </div>
-        <div class="feedback-area incorrect">
-            <p>Your answer is incorrect!</p>
-        </div>
+        
         
 
 
