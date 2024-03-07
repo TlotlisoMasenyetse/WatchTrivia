@@ -2,11 +2,13 @@
 <html>
     <head>
       <title>WatchTrivia</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
 
         h1{
             text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: sans-serif;
             background-color: black;
             color: white;
             padding: 20px;
@@ -19,13 +21,29 @@
          }
 
          #questionone {
-            margin-top: 100px;
+            margin-top: 200px;
         
         }
 
-       
+       #scorecounter{
+        margin-top:75px;
+        margin-bottom: 12px;
+        padding:12.5px;
+        text-align: center;
+        font-family: sans-serif;
+        background-color: rgb(5, 238, 5);
+        position:fixed;
+        z-index: 1000;
+        color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+       }
+
        .quiz-container {
          max-width: 66%;
+         text-align: left;
          margin: 0 auto;
          padding: 20px;
          border: 2px solid #ccc;
@@ -245,13 +263,14 @@ button[type=submit]{
       transform: translateY(4px);
      }
 
-
-
-
       </style>
     </head>
+
     <body>
+
         <h1>WatchTrivia</h1>
+
+        <p id="scorecounter">Number of Questions Answered: <span id="clickCount">0</span></p>
 
         <div class="quiz-container" id="questionone">
             <div class="question-area">
@@ -276,7 +295,7 @@ button[type=submit]{
                     <span>D. Omega</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
       
             </div>
@@ -322,7 +341,7 @@ button[type=submit]{
                     <span>D. Francois Constantin</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
             </div>
 
@@ -366,7 +385,7 @@ button[type=submit]{
                     <span>D. It was a random choice</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
             </div>
             
@@ -410,7 +429,7 @@ button[type=submit]{
                     <span>D. Omega</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
             </div>
             
@@ -454,7 +473,7 @@ button[type=submit]{
                     <span>D. Frank Muller</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
             </div>
            
@@ -499,7 +518,7 @@ button[type=submit]{
                     <span>D. 54 Million</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn"type="submit">Submit</button>
                 </form>
                 
             </div>
@@ -545,7 +564,7 @@ button[type=submit]{
                     <span>D. Switzerland</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
             
@@ -589,7 +608,7 @@ button[type=submit]{
                     <span>D. 4%</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
            
@@ -632,7 +651,7 @@ button[type=submit]{
                     <span>D. $8.5 Million</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
             
@@ -676,7 +695,7 @@ button[type=submit]{
                     <span>D. Roger Dubuis</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
             
@@ -720,7 +739,7 @@ button[type=submit]{
                     <span>D. Eco-Drive</span>
                 </label>
                 <form>
-                    <button type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
             
@@ -758,7 +777,7 @@ button[type=submit]{
             <span>D. Omega</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -787,7 +806,7 @@ button[type=submit]{
             <span>D. Enamel</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -815,7 +834,7 @@ button[type=submit]{
             <span>D. Hublot</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn"  type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -843,7 +862,7 @@ button[type=submit]{
             <span>D. Tourbillon</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -871,7 +890,7 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn"  type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -900,7 +919,7 @@ button[type=submit]{
             <span>D. General Mechanical Timer</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -929,7 +948,7 @@ button[type=submit]{
             <span>D. Vacheron Constantin</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -957,7 +976,7 @@ button[type=submit]{
             <span>D. Omega</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -986,7 +1005,7 @@ button[type=submit]{
             <span>D. Omega</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1015,7 +1034,7 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1044,7 +1063,7 @@ button[type=submit]{
             <span>D. Casio</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1073,7 +1092,7 @@ button[type=submit]{
             <span>D. Audemars Piguet</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1101,7 +1120,7 @@ button[type=submit]{
             <span>D. Rolex</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1130,7 +1149,7 @@ button[type=submit]{
             <span>D. Casio</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1159,7 +1178,7 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1187,7 +1206,7 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1216,7 +1235,7 @@ button[type=submit]{
             <span>D. Rolex</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1245,7 +1264,7 @@ button[type=submit]{
             <span>D. Casio</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1274,7 +1293,7 @@ button[type=submit]{
             <span>D. Omega</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1303,7 +1322,7 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
@@ -1332,11 +1351,25 @@ button[type=submit]{
             <span>D. Seiko</span>
         </label>
         <form>
-            <button type="submit">Submit</button>
+            <button id="submitBtn" type="submit">Submit</button>
         </form>
     </div>
 </div>
 
+<script>
+    var button = document.getElementById('submitBtn');
+
+    var clickCountSpan = document.getElementById('clickCount');
+
+    var clickCount = 0;
+
+    button.addEventListener('click', function() {
+
+        clickCount++;
+
+        clickCountSpan.textContent = clickCount;
+    });
+</script>
       
     </body>
 </html>
