@@ -45,17 +45,11 @@
        .quiz-container {
          max-width: 66%;
          text-align: left;
-         margin: 0 auto;
+         margin: 50px auto;
          padding: 20px;
          border: 2px solid #ccc;
          border-radius: 8px;
        }
-
-
-      .question-area {
-        margin-bottom: 20px;
-}
-
 
     .options-area label {
       display: block;
@@ -104,10 +98,6 @@
       margin-bottom: 10px;
    }
 
-.scoreboard {
-    text-align: right;
-}
-
 .options-area label {
     display: block;
     margin-bottom: 10px;
@@ -116,11 +106,8 @@
 }
 
 .options-area input[type="radio"] {
-    margin-right: 5px;
-    
+    margin-right: 5px; 
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     width: 20px;
     height: 20px;
     border: 2px solid #ccc;
@@ -163,47 +150,8 @@
     }
 }
 
-
-
-
- .scoreboard {
-    text-align: right;
-    font-size: 18px;
-    color: #333;
-}
-
-
 .scoreboard #score {
     font-weight: bold;
-}
-
-
-.game-over {
-    display: none; 
-    text-align: center;
-    margin-top: 20px;
-}
-
-.game-over h2 {
-    color: #333;
-}
-
-.game-over p {
-    margin-bottom: 10px;
-}
-
-.game-over .restart-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.game-over .restart-button:hover {
-    background-color: #0056b3;
 }
 
 @media screen and (max-width: 768px) {
@@ -216,18 +164,28 @@
 button[type=submit]{
     width: 100%;
     display: block;
-    padding: 10px; 
+    cursor: pointer;
     margin: 0;
+    outline: none;
     box-sizing: border-box; 
     background-color: #0019f7;
     border: none;
     color: white;
     padding: 16px 32px;
-    text-decoration: none;}
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+   }
 
-    button:hover{
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
+   button:hover {background-color: #2f00af}
+
+button:active {
+    background-color: #2f00af;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
 
     .feedback {
         display: none;
@@ -236,7 +194,6 @@ button[type=submit]{
     input[type="radio"]:checked + span + .feedback {
         display: block;
     }
-
       </style>
     </head>
 
@@ -246,7 +203,7 @@ button[type=submit]{
 
         <p id="scorecounter">Number of Questions Answered: <span id="clickCount">0</span></p>
 
-        <div class="quiz-container" id="questionone">
+        <div class="quiz-container" id="questionone" id="question1">
             <div class="question-area">
                 <h2>Question 1</h2>
                 <p>Which of the brands listed below is the most famous?</p>
@@ -275,23 +232,12 @@ button[type=submit]{
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
                 </form>
-      
             </div>
             
         </div>
 
-        
-        
-        
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>Your final score is <span id="final-score">0</span>.</p>
-            <button class="restart-button">Restart</button>
-        </div>
-        
-        
 
-        <div class="quiz-container" >
+        <div class="quiz-container"  id="question2">
             <div class="question-area">
                 <h2>Question 2</h2>
                 <p>Who is the founder of Rolex?</p>
@@ -324,11 +270,8 @@ button[type=submit]{
             </div>
 
         </div>
-        
-        
-        
 
-        <div class="quiz-container" >
+        <div class="quiz-container"  id="question3">
             <div class="question-area">
                 <h2>Question 3</h2>
                 <p>Why did the founder of Rolex name the brand Rolex?</p>
@@ -362,7 +305,7 @@ button[type=submit]{
         </div>
 
 
-        <div class="quiz-container" >
+        <div class="quiz-container" id="question4">
             <div class="question-area">
                 <h2>Question 4</h2>
                 <p>Which brand was the first to produce and commercialy distribute the dive watch?</p>
@@ -390,6 +333,7 @@ button[type=submit]{
                 </label>
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
+
                 </form>
             </div>
             
@@ -399,7 +343,7 @@ button[type=submit]{
         
 
         <div class="quiz-container" >
-            <div class="question-area">
+            <div class="question-area" id="question5">
                 <h2>Question 5</h2>
                 <p>Which of the brands below produced the most expensive watch ever sold? </p>
             </div>
@@ -435,7 +379,7 @@ button[type=submit]{
         
 
 
-        <div class="quiz-container" >
+        <div class="quiz-container" id="question6">
             <div class="question-area">
                 <h2>Question 6</h2>
                 <p>What was the price of this watch?</p>
@@ -464,7 +408,6 @@ button[type=submit]{
                 <form>
                     <button id="submitBtn"type="submit">Submit</button>
                 </form>
-                
             </div>
             </div>
            
@@ -473,7 +416,7 @@ button[type=submit]{
         
         
 
-        <div class="quiz-container" >
+        <div class="quiz-container" id="question7">
             <div class="question-area">
                 <h2>Question 7</h2>
                 <p>Which country is home to the most luxury watch brands? </p>
@@ -506,10 +449,7 @@ button[type=submit]{
             
         </div>
 
-        
-        
-        
-        <div class="quiz-container" >
+        <div class="quiz-container"  id="question8">
             <div class="question-area">
                 <h2>Question 8</h2>
                 <p>How much does the watch industry contribute to Switzerland's GDP? </p>
@@ -542,7 +482,7 @@ button[type=submit]{
            
         </div>
 
-        <div class="quiz-container" >
+        <div class="quiz-container" id="question9" >
             <div class="question-area">
                 <h2>Question 9</h2>
                 <p>How much money on average does Rolex make in a year? </p>
@@ -1352,11 +1292,10 @@ document.querySelectorAll("button[type='submit']").forEach(button => {
   for (var i = 0; i < submitButtons.length; i++) {
     submitButtons[i].addEventListener('click', function(event) {
       event.preventDefault();
-      // your code here
     });
   }
 });
   </script>
       
     </body>
-</html>
+</html>  
